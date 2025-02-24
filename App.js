@@ -7,14 +7,14 @@ const NAME = "小宝";
 const MAX_NO_CLICKS = 5;
 
 const romanticMessages = [
-  `✨ ${NAME}，你是我生命中最美丽的烟火 ✨`,
-  `💫 愿与${NAME}共赏漫天星辰 💫`,
-  `💝 有${NAME}的每一天都是最浪漫的日子 💝`,
-  `🌟 ${NAME}，你是我最美的意外 🌟`,
-  `💖 愿陪${NAME}走过漫长岁月 💖`,
-  `💕 ${NAME}，你的笑容比烟花更美 💕`,
-  `✨ ${NAME}，愿你的生活绚烂如烟 ✨`,
-  `💫 ${NAME}，你是我永远的星辰 💫`,
+  `💋 ${NAME}，想亲亲你的小嘴 💋`,
+  `💗 想和${NAME}一起做羞羞的事 💗`,
+  `💝 ${NAME}的身体好诱人呀 💝`,
+  `🌹 想和${NAME}一起感受爱的温度 🌹`,
+  `💘 ${NAME}，你是我的小奶猫 💘`,
+  `💕 想和${NAME}一起沉沦在爱爱里 💕`,
+  `✨ ${NAME}，你的每个样子都让我着迷 ✨`,
+  `💫 ${NAME}，想和你一起体验爱爱的滋味 💫`,
 ];
 
 export default function App() {
@@ -103,10 +103,10 @@ export default function App() {
         {/* 道歉文字和表情 */}
         <View style={styles.textContainer}>
           <Text style={styles.apologyText}>
-            你愿意原谅我的冲动吗？
+            我实在忍不住想涩涩你的冲动{'\n'}
+            可以sese吗？
           </Text>
           <Text style={styles.emoji}>
-            {/* 可爱的表情组合 */}
             🥺👉👈
           </Text>
         </View>
@@ -204,8 +204,11 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     textAlign: 'center',
     position: 'absolute',
-    bottom: 100,
+    left: '50%',
+    top: '50%',
+    transform: [{ translateX: -150 }, { translateY: -20 }],
     padding: 20,
+    width: 300,
     textShadowColor: 'rgba(255,255,255,0.5)',
     textShadowOffset: { width: 0, height: 0 },
     textShadowRadius: 10,
