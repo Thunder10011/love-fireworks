@@ -99,11 +99,17 @@ export default function App() {
         <Firework key={firework.id} x={firework.x} y={firework.y} />
       ))}
       
-      <Animated.View style={{ opacity: contentOpacity }}>
-        {/* 道歉文字 */}
-        <Text style={styles.apologyText}>
-          你愿意原谅我的冲动吗？
-        </Text>
+      <Animated.View style={[styles.contentContainer, { opacity: contentOpacity }]}>
+        {/* 道歉文字和表情 */}
+        <View style={styles.textContainer}>
+          <Text style={styles.apologyText}>
+            你愿意原谅我的冲动吗？
+          </Text>
+          <Text style={styles.emoji}>
+            {/* 可爱的表情组合 */}
+            🥺👉👈
+          </Text>
+        </View>
 
         {/* 按钮容器 */}
         <View style={styles.buttonContainer}>
@@ -140,15 +146,29 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#000',
+  },
+  contentContainer: {
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    paddingHorizontal: 20,
+  },
+  textContainer: {
+    alignItems: 'center',
+    marginBottom: 40,
   },
   apologyText: {
     color: '#fff',
     fontSize: 32,
     fontWeight: '600',
     textAlign: 'center',
-    marginBottom: 40, // 添加底部间距
+    textShadowColor: 'rgba(255,255,255,0.5)',
+    textShadowOffset: { width: 0, height: 0 },
+    textShadowRadius: 10,
+    marginBottom: 20,
+  },
+  emoji: {
+    fontSize: 40,
     textShadowColor: 'rgba(255,255,255,0.5)',
     textShadowOffset: { width: 0, height: 0 },
     textShadowRadius: 10,
